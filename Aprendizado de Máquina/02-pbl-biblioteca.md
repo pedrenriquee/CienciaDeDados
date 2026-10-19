@@ -7,10 +7,10 @@ Ciência de Dados e Aprendizado de Máquina · Sistemas de Informação · 2026.
 
 ## Identificação
 
-- Estudante ou equipe: **PREENCHER**
-- Turma: **PREENCHER**
-- Data de realização: **PREENCHER**
-- Integrantes e contribuições (se em equipe): **PREENCHER**
+- Estudante ou equipe: **Pedro Henrique Matos Lopes**
+- Turma: **Ciencia de Dados e Aprendizado de Máquinas**
+- Data de realização: **19/10/2026**
+- Integrantes e contribuições (se em equipe): **Pedro Henrique Matos Lopes**
 
 ## Situação-problema
 
@@ -33,12 +33,12 @@ Uma biblioteca universitária enfrenta filas em horários específicos e baixa u
 
 | Campo | Registro |
 | --- | --- |
-| Problema e decisão | PREENCHER |
-| Público-alvo | PREENCHER |
-| O que sabemos | PREENCHER |
-| O que precisamos investigar | PREENCHER |
-| Pergunta de negócio 1 | PREENCHER |
-| Pergunta de negócio 2 | PREENCHER |
+| Problema e decisão | O problema seria a alta fila em horários espercificos enquantos outros horário tem baixa presença dos alunos. Como melhorar o atendimento e planejar melhor como usar os recursos |
+| Público-alvo | Seria os proprios estudantes que são os usuários da biblioteca |
+| O que sabemos | Que existem filas em horários espercificos e que há uma baixa utilização de certos serviços.  |
+| O que precisamos investigar | Quais dias e horários concentram as filas e quanto tempo dura a espera. Quais serviços são pouco utilizado e se é pouca do quê desconhecimento, horário, localização. |
+| Pergunta de negócio 1 | Que dia e horário tem mais movimento e que dia e horário tem menos movimento |
+| Pergunta de negócio 2 | Quais serviços  |
 | Unidade de análise e período | PREENCHER |
 | Atributos, unidades e origem pretendida | PREENCHER |
 | Alvo e momento em que será conhecido, ou ausência de alvo | PREENCHER |
