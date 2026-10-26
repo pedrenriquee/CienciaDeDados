@@ -40,8 +40,8 @@ Use o [notebook de apoio](notebooks/laboratorio.ipynb) ou o [CSV sintético](dad
 
 ## 3. Desenvolvimento e teste
 
-- Método de divisão e justificativa: **PREENCHER**
-- Quantidades de treino e teste: **PREENCHER**
+- Método de divisão e justificativa: **No código, X guarda os atributos e y guarda o alvo (evasão). O train_test_split com test_size=0.25, ou seja, 25% dos estudantes foram para o teste. A divisão é feita por sorteio, o que é adequado porque os estudantes simulados são independentes entre si, e a semente 42 faz o sorteio sair igual a cada execução**
+- Quantidades de treino e teste: **450 de treino e 150 de teste**
 - Procedimento de validação no treino: **PREENCHER**
 - Parâmetros da árvore e como foram escolhidos: **PREENCHER**
 - Como o teste ficou fora da seleção: **PREENCHER**
