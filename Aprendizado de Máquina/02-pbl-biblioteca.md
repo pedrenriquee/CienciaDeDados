@@ -38,28 +38,28 @@ Uma biblioteca universitária enfrenta filas em horários específicos e baixa u
 | O que sabemos | Que existem filas em horários espercificos e que há uma baixa utilização de certos serviços.  |
 | O que precisamos investigar | Quais dias e horários concentram as filas e quanto tempo dura a espera. Quais serviços são pouco utilizado e se é pouca do quê desconhecimento, horário, localização. |
 | Pergunta de negócio 1 | Que dia e horário tem mais movimento e que dia e horário tem menos movimento |
-| Pergunta de negócio 2 | Quais serviços  |
-| Unidade de análise e período | PREENCHER |
-| Atributos, unidades e origem pretendida | PREENCHER |
-| Alvo e momento em que será conhecido, ou ausência de alvo | PREENCHER |
-| Abordagem e justificativa | PREENCHER |
-| Alternativa sem ML | PREENCHER |
-| Como avaliar a proposta | PREENCHER |
-| Privacidade e limitações | PREENCHER |
+| Pergunta de negócio 2 | Quais serviços são menos utilizados e quais fatores podem estar relacionados à baixa utilização? |
+| Unidade de análise e período | A melhor forma de analisar seria dividir o tempo de funcionamento da biblioteca em espaços de tempo menores como hora em hora e assim realizar uma analise com diferentes metricas para obter resultados |
+| Atributos, unidades e origem pretendida | dias da semanas, horarios espercificos, numero de atendimentos dos funcionários e os tipos de serviços que foram utilizados|
+| Alvo e momento em que será conhecido, ou ausência de alvo | No primeiro momento não se aplica, o ideal seria analisar os dados já existentes |
+| Abordagem e justificativa | Análise descritiva dos dados, utilizando tabelas, gráficos e comparações por dia e horário |
+| Alternativa sem ML | Utilizar planilhas para organizar os dados e criar dashboards para analisar os dados |
+| Como avaliar a proposta | Utilizar os dados para realizar mudanças no funcionamento da biblioteca e realizar novas analises de dados. Com isso, comparar os dados e verificar se houve melhora ou não nos objetivos propostos |
+| Privacidade e limitações | Utilizar dados e acumula-los de forma anônima de forma que não seja armazenados dados pessoais ou institucionais do usuário |
 
 ## Registro de colaboração
 
 | Integrante | Papel | Contribuição |
 | --- | --- | --- |
-| PREENCHER | PREENCHER | PREENCHER |
+| Pedro Henrique Matos Lopes | Realizador da pesquisa | Definiu o problema, realizou o preenchimento dos campos e prôpos como a pesquisa seria realizada |
 
 ## Conclusão da equipe
 
-**Proposta:** PREENCHER
+**Proposta:** Coletar e analisar dados agregados sobre o movimento da biblioteca e a utilização dos serviços para identificar horários de maior demanda e períodos de baixa utilização. Com base nos resultados, a gestão poderá reorganizar a equipe, melhorar a divulgação dos serviços e avaliar os resultados das mudanças.
 
-**Dúvida ainda aberta:** PREENCHER
+**Dúvida ainda aberta:** A duvida seria entender o que de fato está acontecendo que justifique a má utilização dos serviços da biblioteca 
 
-**Feedback recebido e melhoria realizada:** PREENCHER
+**Feedback recebido e melhoria realizada:** Ainda não recebi feedback externo. A proposta foi melhorada com a definição dos dados que serão analisados e de como os resultados serão avaliados.
 
 ## Entrega
 
