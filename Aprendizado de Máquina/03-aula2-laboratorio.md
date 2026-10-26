@@ -7,14 +7,14 @@ Ciência de Dados e Aprendizado de Máquina · Sistemas de Informação · 2026.
 
 ## Identificação
 
-- Estudante ou equipe: **PREENCHER**
-- Turma: **PREENCHER**
-- Data de realização: **PREENCHER**
-- Integrantes e contribuições (se em equipe): **PREENCHER**
+- Estudante ou equipe: **Pedro Henrique Matos Lopes**
+- Turma: **Ciencia de Dados**
+- Data de realização: **26/10/2026**
+- Integrantes e contribuições (se em equipe): **Pedro Henrique Matos Lopes**
 
 ## Percurso escolhido
 
-- [ ] Python/Colab ou Jupyter.
+- [x ] Python/Colab ou Jupyter.
 - [ ] Orange Data Mining.
 
 Use o [notebook de apoio](notebooks/laboratorio.ipynb) ou o [CSV sintético](dados/educacionais-sinteticos.csv). O CSV contém 600 registros fictícios. Atributos: `frequencia_sem4`, `nota_sem4`, `entregas_sem4`. Alvo: `evasao_fim_semestre` (0 permaneceu, 1 evadiu). As associações foram definidas pela simulação, sem validade empírica sobre estudantes reais.
@@ -23,19 +23,19 @@ Use o [notebook de apoio](notebooks/laboratorio.ipynb) ou o [CSV sintético](dad
 
 | Item | Registro |
 | --- | --- |
-| Ambiente e data | PREENCHER |
-| Versões das ferramentas/bibliotecas | PREENCHER |
-| Semente aleatória | PREENCHER |
-| Caminho do notebook executado ou fluxo Orange | PREENCHER |
-| Origem dos dados e condição sintética | PREENCHER |
+| Ambiente e data | Python: 3.13.16 e data:26/10/2026 |
+| Versões das ferramentas/bibliotecas | NumPy: 2.1.3 pandas: 2.2.3 matplotlib: 3.10.0 scikit-learn: 1.6.1 |
+| Semente aleatória | 42 |
+| Caminho do notebook executado ou fluxo Orange | laboratorio.ipynb |
+| Origem dos dados e condição sintética | Os dados foram obtidos da propria base de dados do laboratorio.ipynb através de uma simulação gerada pela propria ferramente notebook |
 
 ## 2. Problema e preparação
 
-- Pergunta de negócio: **PREENCHER**
-- Unidade de análise e horizonte: **PREENCHER**
-- Atributos disponíveis no instante da previsão: **PREENCHER**
-- Variável-alvo e sua natureza: **PREENCHER**
-- Ausências e outros problemas encontrados: **PREENCHER**
+- Pergunta de negócio: **Quem poderia receber um convite voluntário de apoio antes do fim do semestre? Usando a analise de dados para prever quem poderia ser esse estudandante ficticio**
+- Unidade de análise e horizonte: **O estudante ficticio**
+- Atributos disponíveis no instante da previsão: ** frequencia_sem4, nota_sem4, entregas_sem4**
+- Variável-alvo e sua natureza: **evasao_fim_semestre, o usuario evadiu ou não (0 = permaneceu, 1 = evadiu)**
+- Ausências e outros problemas encontrados: **O numero de notas do semestre 4 consta como ausente 30 vezes**
 - Tratamentos e conjunto usado para aprendê-los: **PREENCHER**
 
 ## 3. Desenvolvimento e teste
