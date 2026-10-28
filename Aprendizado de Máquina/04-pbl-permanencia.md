@@ -45,28 +45,28 @@ Diferencie dados usados na simulação e dados que seriam necessários para uma 
 
 - Classificação, regressão ou outra formulação, com justificativa: **Usaremos classificação binária supervisionada. A equipe de apoio precisa decidir, para cada estudante, se vale a pena convidá-lo para uma conversa de apoio, o que é uma pergunta de sim ou não. O modelo aprende com dados em que já se sabe quem evadiu e quem permaneceu**
 - Algoritmo introdutório escolhido: **Regressão logistica, algoritmo escolhido pois com ele é possivel realizar uma analise de maior ou menor probabilidade de estudante evadir ou não**
-- Referência simples: **Utilizada duas referencias **
+- Referência simples: **Utilizada duas referencias em que ambas são calculadas no mesmo conjunto de testes que são a classe majoritaria e uma regra de frenquencia, a primeira para prever se todos os alunos vão permanecer e a segunda é uma regra por frequência: sinalizar os estudantes com frequência média abaixo de 75% **
 
 ### 5. Avaliação
 
-- Preparação, divisão e validação: **PREENCHER**
-- Métricas e razão da escolha: **PREENCHER**
-- Resultados efetivamente calculados e link da evidência: **PREENCHER**
-- Erros relevantes e consequências: **PREENCHER**
+- Preparação, divisão e validação: **antes do treino, os valores faltantes das variáveis numéricas são preenchidos com a mediana e depois todas são colocadas na mesma escala (padronização). Essas etapas ficam dentro de um Pipeline, que as calcula usando apenas os dados de treino e depois as aplica ao teste.**
+- Métricas e razão da escolha: **Usar recall, precisão, F1, PR-AUC e matriz de confusão. A métrica principal é o recall, porque deixar de identificar um estudante que precisava de apoio custa mais do que convidar quem não precisava. A acurácia não é a principal, porque a evasão é minoria e ela engana**
+- Resultados efetivamente calculados e link da evidência: **https://colab.research.google.com/drive/1Nu8iotSPSJjz29LK4u0TzcPd04SLhetq?usp=sharing base tem 6123 linhas (3000 estudantes) e 23,3% de evasão. O treino ficou com 4899 linhas e o teste com 1224. Na validação cruzada, a regressão logística teve recall médio de 0,762 e a árvore de decisão teve 0,746. A PR-AUC foi 0,620 para a logística e 0,533 para a árvore, então escolhi a regressão logística. O limiar escolhido no treino foi 0,467. No teste, a matriz de confusão foi: 677 estudantes que permaneceram e foram previstos corretamente, 262 falsos positivos, 70 falsos negativos e 215 evasões encontradas.**
+- Erros relevantes e consequências: **O falso negativo é quando o modelo não sinaliza um estudante que depois evade. É o erro mais grave, porque ele fica sem apoio. No teste foram 70 casos.**
 
 ### 6. Limites e proteção
 
-- Por que os resultados não demonstram causalidade? **PREENCHER**
-- Por que dados sintéticos não validam uso institucional? **PREENCHER**
-- Que grupos podem ser mal representados? Como investigar isso com evidências apropriadas? **PREENCHER**
-- Como minimizar dados, restringir acesso e definir retenção? **PREENCHER**
-- Como garantir revisão humana e contestação? **PREENCHER**
+- Por que os resultados não demonstram causalidade? **O modelo só mostra associação entre os sinais e a evasão, e não explica o motivo da saída. A frequência baixa, por exemplo, pode ser consequência de um problema de saúde ou de trabalho, e não a causa da evasão..**
+- Por que dados sintéticos não validam uso institucional? **Porque foram gerados por código e as regras foram definidas por nós, então o modelo só descobre o que já colocamos. Eles servem para aprender o método, mas não para decidir sobre estudantes reais.**
+- Que grupos podem ser mal representados? Como investigar isso com evidências apropriadas? **Podem ser mal representados ingressantes, estudantes que trabalham, quem tem internet limitada e quem mora longe do campus. Para investigar, calculamos recall, precisão e falsos positivos separadamente por subgrupo no teste, olhando também o tamanho de cada grupo.**
+- Como minimizar dados, restringir acesso e definir retenção? **Usaremos só os dados necessários, sem nome, CPF ou endereço, e com o identificador pseudonimizado. Só a equipe técnica acessa a base completa, e a equipe de apoio vê apenas a lista de convites. Os dados são guardados por um prazo definido antes e depois eliminados, conforme a LGPD.**
+- Como garantir revisão humana e contestação? **O modelo só sugere, e a equipe de apoio revisa cada caso antes de qualquer contato. O estudante deve ter um canal simples para perguntar se foi sinalizado, pedir revisão ou corrigir dados, e uma pessoa responde.**
 
 ### 7. Recomendações de apoio
 
-- Ação voluntária proposta: **PREENCHER**
-- Como acolher estudantes não sinalizados pelo modelo: **PREENCHER**
-- O que precisa ser verificado antes de aplicação real: **PREENCHER**
+- Ação voluntária proposta: **Enviar um convite individual e acolhedor para uma conversa opcional com a equipe de apoio, em que o estudante pode conhecer opções como monitoria e orientação sobre bolsas. O convite não cita o modelo e pode ser recusado sem consequência. Como o modelo sinaliza 39% dos estudantes, a equipe pode começar pelos de maior probabilidade, conforme sua capacidade.**
+- Como acolher estudantes não sinalizados pelo modelo: **O apoio deve ser divulgado para todos, com um canal aberto para quem quiser procurar ajuda. Isso é importante porque o modelo deixou passar 70 estudantes que evadiram no teste. Professores e tutores também podem encaminhar estudantes em que perceberam dificuldades.**
+- O que precisa ser verificado antes de aplicação real: **Seria preciso ter aprovação do comitê de ética e do responsável por dados (LGPD) e testar com dados reais de semestres diferentes. Também seria preciso melhorar o recall, que ficou abaixo da meta, analisar o desempenho por subgrupo com mais dados, ver se a quantidade de sinalizados cabe na equipe e acompanhar o modelo ao longo do tempo.**
 
 Previsões não são certezas. Priorize apoio e revisão humana, sem punições ou decisões automáticas prejudiciais.
 
@@ -74,15 +74,15 @@ Previsões não são certezas. Priorize apoio e revisão humana, sem punições 
 
 | Tempo | Conteúdo | Responsável |
 | --- | --- | --- |
-| 1 minuto | Problema e dados | PREENCHER |
-| 2 minutos | Método e resultados | PREENCHER |
-| 1 minuto | Limitações | PREENCHER |
-| 1 minuto | Recomendações de apoio | PREENCHER |
+| 1 minuto | Problema e dados | Pedro Henrique |
+| 2 minutos | Método e resultados | Pedro Henrique |
+| 1 minuto | Limitações | Pedro Henrique |
+| 1 minuto | Recomendações de apoio | Pedro Henrique |
 
 ## Contribuições
 
 | Integrante | Contribuição verificável |
 | --- | --- |
-| PREENCHER | PREENCHER |
+| Pedro Henrique Matos Lopes | Definição do problema, geração dos dados sintéticos, execução do código, análise dos resultados, escrita do documento e apresentação |
 
 [Voltar ao início](README.md).
